@@ -1,3 +1,0 @@
-openai
-requests
-python-dotenv

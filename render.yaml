@@ -1,0 +1,45 @@
+services:
+  - type: cron
+    name: social-auto-poster
+    env: node
+    schedule: "0 14 */2 * *" # every other day at 14:00 UTC
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    plan: starter
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CONTENT_PROMPT
+        sync: false
+      - key: BRAND_NAME
+        sync: false
+      - key: HASHTAGS
+        sync: false
+      - key: ENABLED_PLATFORMS
+        sync: false
+      - key: MIN_WORDS
+        sync: false
+      - key: MAX_WORDS
+        sync: false
+      - key: ADD_HASHTAGS
+        sync: false
+      - key: FB_PAGE_ID
+        sync: false
+      - key: FB_PAGE_ACCESS_TOKEN
+        sync: false
+      - key: LI_ACCESS_TOKEN
+        sync: false
+      - key: LI_MEMBER_URN
+        sync: false
+      - key: LI_ORG_URN
+        sync: false
+      - key: REDDIT_CLIENT_ID
+        sync: false
+      - key: REDDIT_CLIENT_SECRET
+        sync: false
+      - key: REDDIT_USERNAME
+        sync: false
+      - key: REDDIT_PASSWORD
+        sync: false
+      - key: REDDIT_SUBREDDIT
+        sync: false
